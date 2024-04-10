@@ -1,20 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import Speedometer from "./app/Speedometer";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    return (
+        <Speedometer labels={[
+            {color: '#f00', porcentagem: 25},
+            {color: '#0f0', porcentagem: 25},
+            {color: '#00f', porcentagem: 10},
+            {color: '#f0f', porcentagem: 20},
+            {color: '#ff0', porcentagem: 20},
+        ]}
+                     valor={80}
+        />
+    );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
